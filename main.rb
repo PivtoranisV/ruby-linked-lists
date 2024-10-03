@@ -1,5 +1,14 @@
+# frozen_string_literal: true
+
 require_relative 'lib/node'
+require_relative 'lib/linked_list'
 
-ls = Node.new
+new_list = LinkedList.new
 
-p ls.next_node
+new_list.append('Dog')
+new_list.append('Cat')
+new_list.append('Fish')
+
+p new_list.head.value
+p new_list.head.next_node.value
+p new_list.tail.value
