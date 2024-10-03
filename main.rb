@@ -18,12 +18,13 @@ p new_list
 # p new_list.head.next_node.next_node.value
 # p new_list.head.next_node.next_node.next_node.value
 # p new_list.tail.value
-p new_list.size
+# p new_list.size
 # p new_list.at(2)
-p new_list.pop
-p new_list.size
-p new_list.pop
-p new_list.size
+# p new_list.pop
+# p new_list.size
+# p new_list.pop
+# p new_list.size
 
-p new_list.contains?('Fish')
-p new_list.contains?('Hamster')
+# p new_list.contains?('Fish')
+# p new_list.contains?('Hamster')
+p new_list.find('Hamstedr')
