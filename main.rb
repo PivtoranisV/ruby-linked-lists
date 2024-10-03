@@ -29,3 +29,7 @@ p new_list.contains?('Fish')
 p new_list.contains?('Hamster')
 p new_list.find('Hamster')
 puts new_list
+
+new_list.insert_at('Parrot', 3)
+
+puts new_list

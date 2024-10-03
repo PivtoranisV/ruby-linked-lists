@@ -115,4 +115,29 @@ class LinkedList
     end
     "#{result.join(' -> ')} -> nil"
   end
+
+  def insert_at(value, index)
+    new_node = Node.new(value)
+
+    if index.zero?
+      new_node.next_node = head
+      self.head = new_node
+      return
+    end
+
+    current_node = head
+    prev_node = nil
+    idx = 0
+
+    while current_node && idx < index
+      prev_node = current_node
+      current_node = current_node.next_node
+      idx += 1
+    end
+
+    return puts 'Index out of list size' if prev_node.next_node.nil?
+
+    prev_node.next_node = new_node
+    new_node.next_node = current_node
+  end
 end
