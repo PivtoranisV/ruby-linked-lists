@@ -105,4 +105,14 @@ class LinkedList
     end
     nil
   end
+
+  def to_s
+    current_node = head
+    result = []
+    while current_node
+      result << "(#{current_node.value})"
+      current_node = current_node.next_node
+    end
+    "#{result.join(' -> ')} -> nil"
+  end
 end
