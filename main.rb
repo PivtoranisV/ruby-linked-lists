@@ -19,3 +19,4 @@ p new_list.head.next_node.next_node.value
 p new_list.head.next_node.next_node.next_node.value
 p new_list.tail.value
 p new_list.size
+p new_list.at(2)
