@@ -57,4 +57,28 @@ class LinkedList
     end
     current_node
   end
+
+  def pop
+    return puts 'Can\'t delete from empty list' if head.nil?
+
+    if head == tail
+      popped_value = head.value
+      self.head = nil
+      self.tail = nil
+      return popped_value
+    end
+
+    current_node = head
+    prev_node = nil
+
+    while current_node.next_node
+      prev_node = current_node
+      current_node = current_node.next_node
+    end
+
+    prev_node.next_node = nil
+    self.tail = prev_node
+
+    current_node.value
+  end
 end
