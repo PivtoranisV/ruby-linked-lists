@@ -18,8 +18,20 @@ class LinkedList
       self.head = new_node
       self.tail = new_node
     else
-      @tail.next_node = new_node
-      @tail = new_node
+      tail.next_node = new_node
+      self.tail = new_node
+    end
+  end
+
+  def prepend(value)
+    new_node = Node.new(value)
+
+    if head.nil?
+      self.head = new_node
+      self.tail = new_node
+    else
+      new_node.next_node = head
+      self.head = new_node
     end
   end
 end

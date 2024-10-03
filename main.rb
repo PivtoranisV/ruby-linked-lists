@@ -8,7 +8,13 @@ new_list = LinkedList.new
 new_list.append('Dog')
 new_list.append('Cat')
 new_list.append('Fish')
+new_list.prepend('Cow')
+new_list.prepend('Hamster')
+
+p new_list
 
 p new_list.head.value
 p new_list.head.next_node.value
+p new_list.head.next_node.next_node.value
+p new_list.head.next_node.next_node.next_node.value
 p new_list.tail.value
