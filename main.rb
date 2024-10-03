@@ -24,3 +24,6 @@ p new_list.pop
 p new_list.size
 p new_list.pop
 p new_list.size
+
+p new_list.contains?('Fish')
+p new_list.contains?('Hamster')
