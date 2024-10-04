@@ -16,11 +16,10 @@ class LinkedList
 
     if head.nil?
       self.head = new_node
-      self.tail = new_node
     else
       tail.next_node = new_node
-      self.tail = new_node
     end
+    self.tail = new_node
   end
 
   def prepend(value)
