@@ -140,4 +140,27 @@ class LinkedList
     prev_node.next_node = new_node
     new_node.next_node = current_node
   end
+
+  def remove_at(index)
+    current_node = head
+    prev_node = nil
+    idx = 0
+
+    if index.zero?
+      self.head = head.next_node
+      self.tail = nil if head.nil?
+      return
+    end
+
+    while current_node && idx < index
+      prev_node = current_node
+      current_node = current_node.next_node
+      idx += 1
+    end
+
+    return puts 'Index out of list size' if current_node.nil?
+
+    prev_node.next_node = current_node.next_node
+    self.tail = prev_node if current_node.next_node.nil?
+  end
 end

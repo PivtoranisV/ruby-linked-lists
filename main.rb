@@ -14,9 +14,6 @@ new_list.prepend('Hamster')
 puts new_list
 
 p new_list.head.value
-p new_list.head.next_node.value
-p new_list.head.next_node.next_node.value
-p new_list.head.next_node.next_node.next_node.value
 p new_list.tail.value
 p new_list.size
 p new_list.at(2)
@@ -30,6 +27,7 @@ p new_list.contains?('Hamster')
 p new_list.find('Hamster')
 puts new_list
 
-new_list.insert_at('Parrot', 3)
-
+new_list.insert_at('Parrot', 1)
+puts new_list
+new_list.remove_at(3)
 puts new_list
